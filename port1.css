@@ -507,16 +507,14 @@ p {
 }
 
 .portfolio  #portfolio-filters{
-    margin: 0 auto 35px auto;
     list-style: none;
     text-align: center;
     background: #272829;
     border-radius: 50px;
-    padding: 0px 15px;
-    width: 700px;
-    margin: auto;
+    /* padding: 0px 10px; */
+    width: 100%;
+    /* margin: auto; */
     margin-bottom: 25px;
-    
 }
 
 
@@ -526,8 +524,8 @@ p {
     background: #272829;
 outline: none;
 border: none;
-    width:100px;
-    padding: 15px 2px;
+    /* width:100px; */
+    padding: 15px 25px;
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
@@ -539,16 +537,16 @@ border: none;
 #portfolio-filters  button:hover{
     color: #2fa499;
 }
-.portfolio .heading1{
+/* .portfolio .heading1{
     width:80%;
     margin: auto;
 text-align: center;
         font-size: 30px;
         color: #212431;
-}
+} */
 .portfolio .gallary{
 
-    width:80%;
+    width:100%;
     margin: auto;
     padding: 20px 0;
     text-align: center;
@@ -559,7 +557,7 @@ text-align: center;
    
 }
 .portfolio .gallary .portfolio-wrap{
-    width:48%;
+    width:32%;
     height: 250px;
 
     transition: 0.3s;
@@ -789,6 +787,13 @@ h5{
 
     width:100%;
 }
+.portfolio #portfolio-filters{
+    width:100%;
+}
+.portfolio #portfolio-filters button{
+    
+    padding: 15px 8px;
+}
 /* contact */
 .contact .content {
     display: flex;
@@ -845,13 +850,14 @@ footer{
 width:100%;
 height: 120px;
 padding: 0;
-display: flex;
+/* display: flex; */
     }
     header .cardwrapper{
         width:30%;
         margin-top: 0;
         padding: 0 5px;
     box-sizing: border-box;
+    float: left;
 }
 
 
@@ -866,6 +872,8 @@ display: flex;
    header .social{
         width:70%;
         text-align: center;
+        float: left;
+
     }
    
     .social .icons{
@@ -880,8 +888,11 @@ display: flex;
         font-size: 10px;
         line-height: 2.5;
     }
+    
     .menu{
-        display: none;
+        /* display: none; */
+        position: absolute;
+        left:-156px;
 
     }
     /* ul{
@@ -907,7 +918,7 @@ display: flex;
     .toggler{
         display: block;
     }
-    
+
 
 /* about */
 
@@ -970,7 +981,27 @@ display: flex;
      margin-bottom: 50px;
  
  }
- 
+
+ .portfolio #portfolio-filters {
+    list-style: none;
+    text-align: center;
+    background: #272829;
+    border-radius: 50px;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.portfolio #portfolio-filters button {
+   
+   padding: 0 5px;
+
+   font-size: 12px;
+    font-weight: normal;
+    
+}
  /* contact */
 .contact .content{
     width: 100%;
