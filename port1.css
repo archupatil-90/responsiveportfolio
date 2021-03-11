@@ -74,7 +74,6 @@ header .navbar-links{
 
     width: 100%;
     text-align: left;
-    background-color: black;
 }
  header .navbar-links ul{
     display: block;
@@ -126,10 +125,7 @@ header .navbar-links li a{
      border-radius: 10px; 
 
  }
- /* .toggle-button:hover{
-     background-color: #2fa499;
- } */
-
+ 
 
 /* main page */
  .main{
@@ -137,18 +133,17 @@ header .navbar-links li a{
     float: right;
 }
 section {
-    /* padding: 120px 0; */
     margin: 0;
-padding: 20px 0;
     overflow: hidden;
 }
-.hero{
+.main .hero{
 width: 100%;
     height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(images/IMG_20140627_122452.jpg) top center;
+    background: url(images/DSC03832.JPG)top center;;
+    /* background: url(images/IMG_20140627_122452.jpg) top center; */
     background-size: cover;
     margin: 0;
     /* padding: 0; */
@@ -158,10 +153,10 @@ width: 100%;
     content: "";
     background: rgba(5, 13, 24, 0.3);
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     top: 0;
     left: 0;
-    right: 0;
+    /* right: 0; */
     z-index: 1;
 }
 
@@ -169,25 +164,58 @@ width: 100%;
 .hero .hero-container {
     z-index: 2;
     min-width: 300px;
-    text-align: center;
+   
 }
 h1{
     color:#fff;
-    font-size: 40px;
+    font-size: 5em;
     text-transform: capitalize;
+    margin: 0;
+    text-shadow:1px 2px 8px #149ddd;
 }
 
 p {
     color: #fff;
-    /* margin-bottom: 50px; */
     font-size: 26px;
+    margin: 0;
+
+
 }
 .hero p span {
     color: #fff;
     padding-bottom: 4px;
     letter-spacing: 1px;
     border-bottom: 3px solid #149ddd;
+    transition: 3s;
+    margin-left: 5px;
+    font-size: 26px;
 }
+
+.hero p span::before{
+    content: "front end developer";
+    animation:  animation infinite 8s;
+}
+@keyframes animation { 
+  
+    0% { 
+        content: "front end developer"; 
+    } 
+
+    50% { 
+        content: "designer"; 
+    } 
+
+    75% { 
+        content:"front end developer"; 
+    } 
+    100%{
+        content: "designer"; 
+
+    }
+} 
+
+
+
 
 .main .aboutme ,.skills ,.education,.contact ,.portfolio{
 
@@ -231,6 +259,7 @@ p {
     color: black;
     line-height: 1.5;
     font-size: 15px;
+    padding: 0 0 20px 0;
 
 }
 .btn {
@@ -256,7 +285,7 @@ p {
 }
 
 .aboutme .content .left{
-    width:48%;
+    width:35%;
     height: 100%;
 }
 .aboutme .content .left img{
@@ -265,10 +294,11 @@ p {
 
 }
 .aboutme .content .right{
-    width:48%;
+    width:60%;
     height: 100%;
 
 }
+
 .right .rightcontent{
     width:50%;
     float: left;
@@ -515,7 +545,6 @@ p {
     background: #272829;
 outline: none;
 border: none;
-    /* width:100px; */
     padding: 15px 25px;
     font-size: 14px;
     font-weight: 600;
@@ -528,19 +557,13 @@ border: none;
 #portfolio-filters  button:hover{
     color: #2fa499;
 }
-/* .portfolio .heading1{
-    width:80%;
-    margin: auto;
-text-align: center;
-        font-size: 30px;
-        color: #212431;
-} */
+
 .portfolio .gallary{
 
     width:100%;
     margin: auto;
-    /* padding: 20px 0; */
     text-align: center;
+    display: inline-block;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -548,13 +571,13 @@ text-align: center;
 }
 .portfolio .gallary .portfolio-wrap{
     width:32%;
+   
 
     transition: 0.3s;
     position: relative;
     margin-bottom: 20px;
     
     overflow: hidden;
-    /* z-index: 1; */
 
 }
 
@@ -577,9 +600,9 @@ text-align: center;
     /* box-shadow: 0 1px 5px gray; */
 
 }
-img{
+/* img{
     vertical-align: middle;
-}
+} */
 .portfolio-wrap:hover::before{
     opacity: 1;
 }
@@ -695,6 +718,10 @@ h5{
 }
 
 
+/*              responsive for tablet */
+
+
+
 @media only screen and (max-width:768px) {
 
     header .cardwrapper img{
@@ -735,23 +762,14 @@ h5{
     /* padding: 0; */
 }
 .main .aboutme .content .left {
-    width: 100%;
-}
-.main .aboutme .content .right {
-    width: 100%;
-}
-
-.right .rightcontent{
-    width:50%;
+    /* width: 100%; */
     float: left;
 }
-.right .rightinfo{
-    width:50%;
-   float: left;
-
-
-
+.main .aboutme .content .right {
+    /* width: 100%; */
+    float: left;
 }
+
 
 
 /* skill */
@@ -770,6 +788,14 @@ h5{
  .main .portfolio .gallary{
 
     width:100%;
+    display: block;
+}
+
+.portfolio .gallary .portfolio-wrap{
+    width: 48%;
+    float: left;
+    margin: 0 3px;
+
 }
 .portfolio #portfolio-filters{
     width:100%;
@@ -882,6 +908,8 @@ padding: 0;
         display: none;
         position: absolute;
         top:110px;
+    background: #040b14;
+
        
      
      }
@@ -916,8 +944,20 @@ padding: 0;
     .aboutme .content,.skills .content,.contact .content{
         display: block;
     }
+
+
+    .main .aboutme .content{
+        display: block;
+    }
+    .main .aboutme .content .left {
+        width: 100%;
+    }
+    .main .aboutme .content .right {
+        width: 100%;
+    }
     
-    .content .left{
+    
+    /* .content .left{
         width:88%;
      
     }
@@ -926,13 +966,14 @@ padding: 0;
         width:88%;
        
     
-    }
+    } */
     .aboutme p {
         font-size: 14px;
+        padding: 5px 0;
     }
     
     .right .rightcontent{
-        width:45%;
+        width:48%;
         float: left;
     }
     .right .rightinfo{
@@ -953,8 +994,8 @@ padding: 0;
 }
 /* education */
 .timeline .box{
-    width: 100%;
-    padding: 20px 0;}
+    width: 90%;
+    padding: 20px 10px;}
 
     h5{
         margin-top: 0;
