@@ -31,9 +31,15 @@
               <a href="https://www.instagram.com"> <i class="i fab fa-instagram "></i></a>
         </div>
       </div>
-      
-     
-        <div class="menu">
+      <a class="toggle-button">
+         <!-- <i class="fas fa-bars"></i> -->
+         <span class="bar"></span>
+         <span class="bar"></span>
+   
+         <span class="bar"></span>
+   
+     </a>
+     <div class="navbar-links">
         <ul>
   
            <li>
@@ -74,14 +80,7 @@
   
         </ul>
         
-        <button class="toggler" onclick="click()">
-         <span></span>
-         <span></span>
-
-         <span></span>
-
-
-     </button>
+      
     </div>
    
 
@@ -462,7 +461,14 @@
 <!-- </div> -->
 <script src="javascript/port.js"></script>
 
+<script>
+   const toglebtn = document.getElementsByClassName("toggle-button")[0]
+const menubar = document.getElementsByClassName("navbar-links")[0]
+toglebtn.addEventListener('click' , () =>{
+menubar.classList.toggle("active")
 
+})
+</script>
 
 </body>
 </html>
